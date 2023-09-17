@@ -1,2 +1,4 @@
 # safer-rm
- A shell script which passes rm with -I parameter to avoid unwanted deletion of files.
+A shell script which passes rm with -I parameter to avoid unwanted deletion of files.
+
+Refer to https://codeberg.org/sameerw/safer-rm
