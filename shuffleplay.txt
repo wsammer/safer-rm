@@ -1,0 +1,5 @@
+About shuffleplay.sh script
+
+Takes directory or wildcard as argument and randomly plays the files contained in the directory / wildcard.
+
+Uses mpv for playing, substitute mpv with player of your choice.

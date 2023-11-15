@@ -1,0 +1,38 @@
+#!/bin/bash
+flags='-I'
+x=$#
+y=$(($x-1))
+last="${@:$x}" 
+if [ "x$1" = "x-rf" ] ; then
+flags='-rI'
+set -- "${@:2}"
+elif [ "x$1" = "x-Rf" ] ; then
+flags='-rI'
+set -- "${@:2}"
+elif [ "x$1" = "x-fR" ] ; then
+flags='-rI'
+set -- "${@:2}"
+elif [ "x$1" = "x-fr" ] ; then
+flags='-rI'
+set -- "${@:2}"
+elif [ "x$1" = "x-f" ] ; then
+flags='-I'
+set -- "${@:2}"
+fi
+if [ "x$last" = "x-rf" ] ; then
+flags='-rI'
+set -- "${@:1:$y}"
+elif [ "x$last" = "x-Rf" ] ; then
+flags='-rI'
+set -- "${@:1:$y}"
+elif [ "x$last" = "x-fR" ] ; then
+flags='-rI'
+set -- "${@:1}:$y"
+elif [ "x$last" = "x-fr" ] ; then
+flags='-rI'
+set -- "${@:1:$y}"
+elif [ "x$last" = "x-f" ] ; then
+flags='-I'
+set -- "${@:1:$y}"
+fi
+/bin/rm $flags "$@"

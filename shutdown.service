@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Scripts at Stop
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/bin/true
+ExecStop=/etc/systemd/system/shutdown.sh
+
+[Install]
+WantedBy=multi-user.target

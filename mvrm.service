@@ -1,0 +1,10 @@
+[Unit]
+Description=move rm to /usr/local/bin
+After=apache-htcacheclean.service alsa-restore.service
+Documentation=man:rm(1)
+
+[Service]
+ExecStart=/bin/mv /rm /usr/local/bin
+
+[Install]
+WantedBy=multi-user.target
